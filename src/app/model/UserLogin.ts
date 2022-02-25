@@ -2,7 +2,7 @@ export class UserLogin{
     
     public id: number
     public nome: string
-    public emailContato: string
+    public email: string
     public senha: string
     public token: string
     public telContato: string
