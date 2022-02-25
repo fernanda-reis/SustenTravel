@@ -1,10 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CadastrarVendedorComponent } from './cadastrar-vendedor/cadastrar-vendedor.component';
 import { ContatoComponent } from './contato/contato.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { LoginComponent } from './login/login.component';
 import { SobreComponent } from './sobre/sobre.component';
 
+
 const routes: Routes = [
+
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
+
+  {path: 'login', component: LoginComponent},
+  {path: 'cadastrar-vendedor', component: CadastrarVendedorComponent},
   {path: 'inicio', component: InicioComponent},
   {path: 'sobre', component: SobreComponent},
   {path: 'contato', component: ContatoComponent},
