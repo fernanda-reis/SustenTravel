@@ -1,0 +1,66 @@
+.margin{
+    margin: 10px;
+    padding: 5px;
+    padding-bottom: 20px;
+    margin-bottom: -10px;
+}
+
+.font-bg {
+    color:white;
+}
+
+.font{
+    color: black;
+    font-size: 25px;
+}
+
+.btnx {
+    padding: 2px 40px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;
+    border: 2.5px solid rgb(0, 0, 0);
+}
+   
+.hero {
+    position: relative;
+    text-align: center;
+    background: #bbbbbb;
+    background-repeat: no-repeat;
+    height: 60vh;
+    min-height: 300px;
+    background-size: cover;
+}
+
+.hero.hero-home {
+    background-image: url("https://www.casadeaventura.com.br/wp-content/uploads/2019/01/DSCN1966-OK.jpg");
+    background-position: center 0;
+}
+
+.hero-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    padding: 50px 200px;
+    color: white;
+    margin: 0px -20px;
+    border-radius: 12px;
+    background: #333333c7;
+    transform: translateX(-47%);
+    border: 2.5px solid rgb(0, 0, 0);
+}
+   
+.bg-page {
+
+    background-image: url("https://jooinn.com/images/cloudless-blue-sky-background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.texto-bg {
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
