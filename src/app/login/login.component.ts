@@ -32,6 +32,8 @@ export class LoginComponent implements OnInit {
         this.userLogin = resp;
 
         environment.token = this.userLogin.token;
+        environment.email = this.userLogin.email;
+        environment.tipo = this.userLogin.tipo;
         environment.nome = this.userLogin.nome;
         environment.foto = this.userLogin.foto;
         environment.id = this.userLogin.id;
