@@ -23,6 +23,8 @@ export class MeusProdutosComponent implements OnInit {
   produtoEdit: Produto = new Produto();
   categoriaEdit: Categoria = new Categoria();
 
+  idProdutoDeletar:number
+
   constructor(
     private authService: AuthService,
     private router: Router,
@@ -50,23 +52,6 @@ export class MeusProdutosComponent implements OnInit {
         this.categoriaEdit = resp;
       });
     console.log(this.categoriaEdit);
-  }
-
-  atualizar() {
-    this.produtoService
-      .putProduto(this.produtoEdit)
-      .subscribe((resp: Produto) => {
-        this.produtoEdit = resp;
-      });
-
-    this.categoriaService
-      .putCategoria(this.categoriaEdit)
-      .subscribe((resp: Categoria) => {
-        this.categoriaEdit = resp;
-      });
-
-    alert('Produto atualizado com sucesso!');
-    this.findByEmailUser();
   }
 
   findByEmailUser() {
@@ -104,7 +89,32 @@ export class MeusProdutosComponent implements OnInit {
     this.categoria = new Categoria();
   }
 
+  atualizar() {
+    this.produtoService
+      .putProduto(this.produtoEdit)
+      .subscribe((resp: Produto) => {
+        this.produtoEdit = resp;
+      });
 
-  //deletarProduto
-  
+    this.categoriaService
+      .putCategoria(this.categoriaEdit)
+      .subscribe((resp: Categoria) => {
+        this.categoriaEdit = resp;
+      });
+
+    alert('Produto atualizado com sucesso!');
+    this.findByEmailUser();
+  }
+
+  atribuirId(id: number) {
+    this.idProdutoDeletar = id;
+  }
+
+  deletar(){
+    this.categoriaService.deleteCategoria(this.idProdutoDeletar).subscribe(() => {
+      alert('Produto apagado com sucesso!')
+      this.findByEmailUser();
+    })
+  }
+
 }

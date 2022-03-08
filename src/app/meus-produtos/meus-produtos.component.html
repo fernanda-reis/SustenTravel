@@ -60,41 +60,6 @@
         <div
           class="row row-cols-1 row-cols-md-3 my-5 d-flex justify-content-start"
         >
-          <div class="col mb-4 pb-0">
-            <div class="card h-70">
-              <img
-                src="https://www.pontoxtecidos.com.br/static/567/sku/tricoline-100-alg-lisa-lisa-cinza-chumbo-tricoline-100-alg--p-1616151959979.jpg"
-                class="card-img-top"
-                width="30px"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Nome</h5>
-                <p class="card-text">Descricao</p>
-                <div class="row d-flex justify-content-start">
-                  <button class="btn btn-info m-2">Editar</button>
-                  <button class="btn btn-danger m-2">Excluir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="card h-70">
-              <img
-                src="https://www.pontoxtecidos.com.br/static/567/sku/tricoline-100-alg-lisa-lisa-cinza-chumbo-tricoline-100-alg--p-1616151959979.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Nome</h5>
-                <p class="card-text">Descricao</p>
-                <div class="row d-flex justify-content-start">
-                  <button class="btn btn-info m-2">Editar</button>
-                  <button class="btn btn-danger m-2">Excluir</button>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="col mb-4" *ngFor="let produto of user.produtos">
             <div class="card h-70">
               <img
@@ -115,7 +80,11 @@
                   >
                     Editar
                   </button>
-                  <button class="btn btn-danger m-2">Excluir</button>
+                  <button class="btn btn-danger m-2"
+                  data-toggle="modal"
+                  data-target="#deletarProduto"
+                  (click) = atribuirId(produto.categoria.idCategoria)>
+                  Excluir</button>
                 </div>
               </div>
             </div>
@@ -262,7 +231,7 @@
   </div>
 </div>
 
-<!-- MODAL -->
+<!-- MODAL EDIÇÃO -->
 
 <div
   class="modal fade"
@@ -389,7 +358,6 @@
           ></textarea>
         </div>
 
-        ...
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">
@@ -402,6 +370,54 @@
           data-dismiss="modal"
         >
           Salvar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div
+  class="modal fade"
+  id="deletarProduto"
+  data-backdrop="static"
+  data-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Excluir Produto</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!--CORPO MODAL-->
+        <p>Tem certeza de que deseja excluir o passeio?</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">
+          Cancelar
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="deletar()"
+          data-dismiss="modal"
+        >
+          Excluir
         </button>
       </div>
     </div>
