@@ -6,7 +6,7 @@
 
     <div class="hero hero-home texto-bg">
 
-        <div> asasada </div>
+        <div> Texto de Entrada </div>
 
     </div>
 
@@ -19,12 +19,21 @@
     <div class = "margin font mt-3">Escolha sua categoria.</div>
     <owl-carousel-o [options]="customOptions">
 
+      
+
       <ng-template carouselSlide> <!-- Aldeia -->
-        <img
-        class="p-2"
-        src=""
-      />
+        <a (click) = "entrar()">  
+
+          <img
+          class="p-2"
+          src=""
+          />
+
+        </a>
+
+       
       </ng-template> 
+    
 
       <ng-template carouselSlide> <!-- Camping -->
         <img
