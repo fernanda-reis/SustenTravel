@@ -33,8 +33,8 @@ export class CategoriaService {
     return this.http.get<Categoria[]>(`https://projeto-integrador-08.herokuapp.com/categoria/prioridade/${prioridade}`, this.token)
   }
 
-  getCategoriaById(id: number):Observable<Categoria[]>{
-    return this.http.get<Categoria[]>(`https://projeto-integrador-08.herokuapp.com/categoria/${id}`, this.token)
+  getCategoriaById(id: number):Observable<Categoria>{
+    return this.http.get<Categoria>(`https://projeto-integrador-08.herokuapp.com/categoria/${id}`, this.token)
   }
 
   postCategoria(categoria: Categoria): Observable<Categoria> {

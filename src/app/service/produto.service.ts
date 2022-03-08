@@ -25,8 +25,8 @@ export class ProdutoService {
     return this.http.get<Produto[]>(`https://projeto-integrador-08.herokuapp.com/produto/nome/${nome}`, this.token)
   }
 
-  getProdutoById(id: number):Observable<Produto[]>{
-    return this.http.get<Produto[]>(`https://projeto-integrador-08.herokuapp.com/produto/${id}`, this.token)
+  getProdutoById(id: number):Observable<Produto>{
+    return this.http.get<Produto>(`https://projeto-integrador-08.herokuapp.com/produto/${id}`, this.token)
   }
 
   postProduto(produto: Produto): Observable<Produto> {

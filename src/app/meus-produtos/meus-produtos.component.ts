@@ -13,16 +13,12 @@ import { ProdutoService } from '../service/produto.service';
   templateUrl: './meus-produtos.component.html',
   styleUrls: ['./meus-produtos.component.css'],
 })
-
 export class MeusProdutosComponent implements OnInit {
-
   produto: Produto = new Produto();
   categoria: Categoria = new Categoria();
 
-
   user: Usuario = new Usuario();
   emailUser = environment.email;
-
 
   produtoEdit: Produto = new Produto();
   categoriaEdit: Categoria = new Categoria();
@@ -39,10 +35,38 @@ export class MeusProdutosComponent implements OnInit {
     this.findByEmailUser();
   }
 
-  findProdutoById(id: number){
-    this.produtoService.getProdutoById(id).subscribe((resp:Produto[]) => {
-      this.produtoEdit = resp[0];
-    })
+  findProdutoById(idproduto: number) {
+    this.produtoService.getProdutoById(idproduto).subscribe((resp: Produto) => {
+      this.produtoEdit = resp;
+      console.log(this.produtoEdit);
+    });
+    console.log('id produto', idproduto);
+  }
+
+  findCategoriaById(idcategoria: number) {
+    this.categoriaService
+      .getCategoriaById(idcategoria)
+      .subscribe((resp: Categoria) => {
+        this.categoriaEdit = resp;
+      });
+    console.log(this.categoriaEdit);
+  }
+
+  atualizar() {
+    this.produtoService
+      .putProduto(this.produtoEdit)
+      .subscribe((resp: Produto) => {
+        this.produtoEdit = resp;
+      });
+
+    this.categoriaService
+      .putCategoria(this.categoriaEdit)
+      .subscribe((resp: Categoria) => {
+        this.categoriaEdit = resp;
+      });
+
+    alert('Produto atualizado com sucesso!');
+    this.findByEmailUser();
   }
 
   findByEmailUser() {
@@ -50,25 +74,21 @@ export class MeusProdutosComponent implements OnInit {
       .getByEmailUser(this.emailUser)
       .subscribe((resp: Usuario) => {
         this.user = resp;
-        console.log(this.user);
+        // console.log(this.user);
       });
   }
 
-   cadastrarCategoria () {
+  cadastrarCategoria() {
     this.categoriaService
       .postCategoria(this.categoria)
       .subscribe((resp: Categoria) => {
         this.categoria = resp;
       });
 
-      alert('Categoria cadastrada com sucesso!');
-
+    alert('Categoria cadastrada com sucesso!');
   }
 
   cadastrarProduto() {
-    console.log(this.produto);
-    console.log(this.categoria);
-
     this.user.emailContato = this.emailUser;
     this.produto.usuario = this.user;
 
@@ -79,14 +99,12 @@ export class MeusProdutosComponent implements OnInit {
       this.produto = resp;
     });
 
-
-
     alert('Produto cadastrado com sucesso!');
     this.produto = new Produto();
     this.categoria = new Categoria();
   }
 
-  //editarProduto
 
   //deletarProduto
+  
 }
