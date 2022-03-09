@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark">
   <a class="navbar-brand" href="#">SustenTravel</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -6,60 +6,67 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink ="/inicio">Inicio<span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink ="/inicio">
+          <i class="fa fa-home d-flex flex-column align-items-center" aria-hidden="true"></i>
+          Inicio<span class="sr-only">(current)</span>
+      </a>
       </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-          Categorias
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Rural</a>
-          <a class="dropdown-item" href="#">Litoral</a>
-          <a class="dropdown-item" href="#">Urbano</a>
-          <a class="dropdown-item" href="#">Camping</a>
-          <a class="dropdown-item" href="#">Aldeia</a>
-        </div>
-      </li>
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-          Regiões
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Norte</a>
-          <a class="dropdown-item" href="#">Nordest</a>
-          <a class="dropdown-item" href="#">Sul</a>
-          <a class="dropdown-item" href="#">Sudeste</a>
-          <a class="dropdown-item" href="#">Centro-Oeste</a>
-        </div>
-      </li>
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+          <i class="fa fa-globe d-flex flex-column align-items-center" aria-hidden="true"></i>
           Explore
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">O que é Prioridade</a>
+          <p class="dropdown-item">Por Tipos</p>
+          <a class="dropdown-item" [routerLink]="['/produtos', 'Rural']">Rural</a>
+          <a class="dropdown-item" [routerLink]="['/produtos', 'Litoral']">Litoral</a>
+          <a class="dropdown-item" [routerLink]="['/produtos', 'Urbano']">Urbano</a>
+          <a class="dropdown-item" [routerLink]="['/produtos', 'Camping']">Camping</a>
+          <a class="dropdown-item" [routerLink]="['/produtos', 'Aldeias']">Aldeia</a>
+          <p class="dropdown-item">Por Região</p>
+          <a class="dropdown-item" [routerLink]="['/produtos', 'Norte']">Norte</a>
+          <a class="dropdown-item" [routerLink]="['/produtos', 'Nordeste']">Nordeste</a>
+          <a class="dropdown-item" [routerLink]="['/produtos', 'Centro-Oeste']">Centro-Oeste</a>
+          <a class="dropdown-item" [routerLink]="['/produtos', 'Sudeste']">Sudeste</a>
+          <a class="dropdown-item" [routerLink]="['/produtos', 'Sul']">Sul</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Alta Prioridade</a>
-          <a class="dropdown-item" href="#">Média Prioridade</a>
-          <a class="dropdown-item" href="#">Baixa Prioridade</a>
+          <a class="dropdown-item" href="#">Passeio Sustentável</a>
         </div>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" routerLink = "sobre">Sobre nós</a>
+        <a class="nav-link" routerLink = "sobre">
+          <i class="fa fa-leaf d-flex flex-column align-items-center" aria-hidden="true"></i>
+          Sobre nós</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" routerLink = "contato">Contato</a>
+        <a class="nav-link" routerLink = "contato">
+          <i class="fa fa-phone d-flex flex-column align-items-center" aria-hidden="true"></i>
+          Contato</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+
+
+    <ul class="navbar-nav ml-auto d-flex align-items-center">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+          Olá, {{nome}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="meus-produtos">Meus Passeios</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Editar Perfil</a>
+          <a class="dropdown-item" (click)='sair()'>Sair</a>
+        </div>
+    </li>
+      <li class="nav-item active">
+        <img src="{{foto}}" alt="Foto do usuário" width="50px" height="50px" class="rounded-circle">
+    </li>
+</ul>
+
+
   </div>
 </nav>

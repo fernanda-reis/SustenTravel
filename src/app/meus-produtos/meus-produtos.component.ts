@@ -16,6 +16,7 @@ import { ProdutoService } from '../service/produto.service';
 export class MeusProdutosComponent implements OnInit {
   produto: Produto = new Produto();
   categoria: Categoria = new Categoria();
+  idCategoria: number
 
   user: Usuario = new Usuario();
   emailUser = environment.email;
@@ -24,6 +25,7 @@ export class MeusProdutosComponent implements OnInit {
   categoriaEdit: Categoria = new Categoria();
 
   idProdutoDeletar:number
+
 
   constructor(
     private authService: AuthService,
@@ -63,31 +65,30 @@ export class MeusProdutosComponent implements OnInit {
       });
   }
 
-  cadastrarCategoria() {
+  cadastrar() {
     this.categoriaService
       .postCategoria(this.categoria)
       .subscribe((resp: Categoria) => {
         this.categoria = resp;
+
+        this.user.emailContato = this.emailUser;
+        this.produto.usuario = this.user;
+
+
+        this.produto.categoria = this.categoria;
+        console.log(this.produto);
+
+        this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
+          this.produto = resp;
+        });
+
       });
 
-    alert('Categoria cadastrada com sucesso!');
-  }
-
-  cadastrarProduto() {
-    this.user.emailContato = this.emailUser;
-    this.produto.usuario = this.user;
-
-    this.produto.categoria = this.categoria;
-    console.log(this.produto);
-
-    this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
-      this.produto = resp;
-    });
-
-    alert('Produto cadastrado com sucesso!');
+    alert('Passeio cadastrado com sucesso!');
     this.produto = new Produto();
     this.categoria = new Categoria();
   }
+
 
   atualizar() {
     this.produtoService

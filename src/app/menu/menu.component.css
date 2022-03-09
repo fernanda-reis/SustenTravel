@@ -1,0 +1,16 @@
+
+
+p, p:hover {
+  margin: 0;
+  background-color: #d3d3d3b4;
+}
+
+a {
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: #9C3EDF;
+}
+
+

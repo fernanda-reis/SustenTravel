@@ -18,15 +18,15 @@ export class ProdutoService {
   }
 
   getAllProdutos(): Observable<Produto[]>{
-    return this.http.get<Produto[]>("https://projeto-integrador-08.herokuapp.com/produto", this.token)
+    return this.http.get<Produto[]>("https://projeto-integrador-08.herokuapp.com/produto")
   }
 
   getAllProdutosByNome(nome: string):Observable<Produto[]>{
-    return this.http.get<Produto[]>(`https://projeto-integrador-08.herokuapp.com/produto/nome/${nome}`, this.token)
+    return this.http.get<Produto[]>(`https://projeto-integrador-08.herokuapp.com/produto/nome/${nome}`)
   }
 
   getProdutoById(id: number):Observable<Produto>{
-    return this.http.get<Produto>(`https://projeto-integrador-08.herokuapp.com/produto/${id}`, this.token)
+    return this.http.get<Produto>(`https://projeto-integrador-08.herokuapp.com/produto/${id}`)
   }
 
   postProduto(produto: Produto): Observable<Produto> {

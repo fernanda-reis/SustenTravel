@@ -18,23 +18,23 @@ export class CategoriaService {
   }
 
   getAllCategorias(): Observable<Categoria[]>{
-    return this.http.get<Categoria[]>("https://projeto-integrador-08.herokuapp.com/categoria", this.token)
+    return this.http.get<Categoria[]>("https://projeto-integrador-08.herokuapp.com/categoria")
   }
 
   getAllCategoriasByTipo(tipo: string):Observable<Categoria[]>{
-    return this.http.get<Categoria[]>(`https://projeto-integrador-08.herokuapp.com/categoria/tipo/${tipo}`, this.token)
+    return this.http.get<Categoria[]>(`https://projeto-integrador-08.herokuapp.com/categoria/tipo/${tipo}`)
   }
 
   getAllCategoriasByRegiao(regiao: string):Observable<Categoria[]>{
-    return this.http.get<Categoria[]>(`https://projeto-integrador-08.herokuapp.com/categoria/regiao/${regiao}`, this.token)
+    return this.http.get<Categoria[]>(`https://projeto-integrador-08.herokuapp.com/categoria/regiao/${regiao}`)
   }
 
   getAllCategoriasByPrioridade(prioridade: string):Observable<Categoria[]>{
-    return this.http.get<Categoria[]>(`https://projeto-integrador-08.herokuapp.com/categoria/prioridade/${prioridade}`, this.token)
+    return this.http.get<Categoria[]>(`https://projeto-integrador-08.herokuapp.com/categoria/prioridade/${prioridade}`)
   }
 
   getCategoriaById(id: number):Observable<Categoria>{
-    return this.http.get<Categoria>(`https://projeto-integrador-08.herokuapp.com/categoria/${id}`, this.token)
+    return this.http.get<Categoria>(`https://projeto-integrador-08.herokuapp.com/categoria/${id}`)
   }
 
   postCategoria(categoria: Categoria): Observable<Categoria> {

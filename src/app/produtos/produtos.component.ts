@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, Route, ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
@@ -12,20 +13,34 @@ import { CategoriaService } from '../service/categoria.service';
 export class ProdutosComponent implements OnInit {
 
   listaCategoria: Categoria[]
-  listaCategoriaTipo: Categoria[]
-  tipo: string
-  listaCategoriaRegiao: Categoria[]
-  regiao: string
-  listaCategoriaPrioridade: Categoria[]
-  prioridade: string
+  nome: string
+
 
   constructor(
     private authService: AuthService,
+    private categoriaService: CategoriaService,
     private router: Router,
-    private categoriaService: CategoriaService
+    private route: ActivatedRoute
   ) { }
 
-  ngOnInit(): void {
+
+  ngOnInit(){
+    // if(environment.token == ''){
+    //   this.router.navigate(['/login'])
+    // }
+    this.authService.refreshToken();
+    this.nome = this.route.snapshot.params['nome']
+
+    if(this.nome == 'Aldeias' || this.nome == 'Camping' || this.nome == 'Litoral' || this.nome == 'Rural' || this.nome == 'Urbano') {
+    this.getAllCategoriasTipo()
+    }
+    else if (this.nome == 'Norte' || this.nome == 'Nordeste' || this.nome == 'Sul' || this.nome == 'Sudeste' || this.nome == 'Centro-Oeste'){
+      this.getAllCategoriasRegiao()
+    }
+    else if (this.nome == 'sustentavel') {
+      this.nome = 'Passeio Sustentável'
+      this.getAllCategoriasPrioridade()
+    }
   }
 
   getAllCategorias(){
@@ -35,22 +50,22 @@ export class ProdutosComponent implements OnInit {
   }
 
   getAllCategoriasTipo(){
-    this.categoriaService.getAllCategoriasByTipo(this.tipo).subscribe((resp: Categoria[]) => {
-      this.listaCategoriaTipo = resp
+    this.categoriaService.getAllCategoriasByTipo(this.nome).subscribe((resp: Categoria[]) => {
+      this.listaCategoria = resp
+      console.log(this.listaCategoria)
     })
   }
 
   getAllCategoriasRegiao(){
-    this.categoriaService.getAllCategoriasByRegiao(this.regiao).subscribe((resp: Categoria[]) => {
-      this.listaCategoriaRegiao = resp
+    this.categoriaService.getAllCategoriasByRegiao(this.nome).subscribe((resp: Categoria[]) => {
+      this.listaCategoria = resp
     })
   }
 
   getAllCategoriasPrioridade(){
-    this.categoriaService.getAllCategoriasByPrioridade(this.prioridade).subscribe((resp: Categoria[]) => {
-      this.listaCategoriaPrioridade = resp
+    this.categoriaService.getAllCategoriasByPrioridade(this.nome).subscribe((resp: Categoria[]) => {
+      this.listaCategoria = resp
     })
   }
 
-  
 }

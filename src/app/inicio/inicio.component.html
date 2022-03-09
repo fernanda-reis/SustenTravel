@@ -1,5 +1,5 @@
 <div class = "bg-page margin-topo">
-    
+
     <div class = "container-fluid">
 
 <div class="hero">
@@ -19,52 +19,72 @@
     <div class = "margin font mt-3">Escolha sua categoria.</div>
     <owl-carousel-o [options]="customOptions">
 
-      
 
-      <ng-template carouselSlide> <!-- Aldeia -->
-        <a (click) = "entrar()">  
+
+      <ng-template carouselSlide> <!-- Aldeias -->
+        <a [routerLink]="['/produtos', 'Aldeias']">
 
           <img
           class="p-2"
-          src=""
+          src="https://i.imgur.com/8bU3BLk.jpg"
           />
 
         </a>
 
-       
-      </ng-template> 
-    
+
+      </ng-template>
+
 
       <ng-template carouselSlide> <!-- Camping -->
-        <img
-        class="p-2"
-        src=""
-      />
-      </ng-template>  
+
+        <a [routerLink]="['/produtos', 'Camping']">
+          <img
+          class="p-2"
+          src="https://i.imgur.com/8bU3BLk.jpg"
+          />
+
+      </a>
+
+      </ng-template>
 
       <ng-template carouselSlide> <!-- Litoral -->
-        <img
-        class="p-2"
-        src=""
-      />
-      </ng-template> 
+
+        <a [routerLink]="['/produtos', 'Litoral']">
+          <img
+          class="p-2"
+          src="https://i.imgur.com/8bU3BLk.jpg"
+          />
+
+      </a>
+
+      </ng-template>
 
       <ng-template carouselSlide> <!-- Rural -->
-        <img
-        class="p-2"
-        src=""
-      />
-      </ng-template> 
+
+        <a [routerLink]="['/produtos', 'Rural']">
+          <img
+          class="p-2"
+          src="https://i.imgur.com/8bU3BLk.jpg"
+          />
+
+    </a>
+      </ng-template>
 
       <ng-template carouselSlide> <!-- Urbano -->
-        <img
-        class="p-2"
-        src=""
-      />
-      </ng-template> 
+
+        <a [routerLink]="['/produtos', 'Urbano']">
+          <img
+          class="p-2"
+          src="https://i.imgur.com/8bU3BLk.jpg"
+          />
+
+    </a>
+      </ng-template>
+
+
 
     </owl-carousel-o>
-    
+
     </div>
 
     <div class = "container text-center">
@@ -73,41 +93,52 @@
         <owl-carousel-o [options]="customOptions">
 
           <ng-template carouselSlide> <!-- Sul -->
-            <img
-            class="p-2"
-            src=""
-          />
-          </ng-template>  
+
+            <a [routerLink]="['/produtos', 'Sul']">
+              <img
+              class="p-2"
+              src="https://i.imgur.com/8bU3BLk.jpg"
+              />
+        </a>
+          </ng-template>
           <ng-template carouselSlide> <!-- Nordeste -->
-            <img
-            class="p-2"
-            src=""
-          />
-          </ng-template>  
+            <a [routerLink]="['/produtos', 'Nordeste']">
+              <img
+              class="p-2"
+              src="https://i.imgur.com/8bU3BLk.jpg"
+              />
+        </a>
+          </ng-template>
 
           <ng-template carouselSlide> <!-- Norte -->
-            <img
-            class="p-2"
-            src=""
-          />
-          </ng-template>  
+            <a [routerLink]="['/produtos', 'Norte']">
+              <img
+              class="p-2"
+              src="https://i.imgur.com/8bU3BLk.jpg"
+              />
+        </a>
+          </ng-template>
 
           <ng-template carouselSlide> <!-- Centro-Oeste -->
-            <img
-            class="p-2"
-            src=""
-          />
+            <a [routerLink]="['/produtos', 'Centro-Oeste']">
+              <img
+              class="p-2"
+              src="https://i.imgur.com/8bU3BLk.jpg"
+              />
+        </a>
           </ng-template>
 
           <ng-template carouselSlide> <!-- Sudeste -->
-            <img
-            class="p-2"
-            src=""
-          />
+            <a [routerLink]="['/produtos', 'Sudeste']">
+              <img
+              class="p-2"
+              src="https://i.imgur.com/8bU3BLk.jpg"
+              />
+        </a>
           </ng-template>
 
         </owl-carousel-o>
-        
+
         </div>
 
 <div class="container margin">
@@ -117,11 +148,13 @@
         <div class="col-md-6">
 
             <h2>Saia da caixinha</h2>
-    
+
             <p>Conheça...</p>
 
+            <button class="btn btn-success" [routerLink]="['/produtos', 'sustentavel']">Viaje Sustentável</button>
+
             <button class="btn btn-success" routerLink="/meus-produtos">Meus Produtos</button>
-    
+
             </div>
 
         <div class="col-md-6">
