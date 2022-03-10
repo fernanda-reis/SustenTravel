@@ -1,0 +1,71 @@
+/*Fontes*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+html, body {
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+
+
+.bg-img {
+
+    background-image: url("https://i.imgur.com/T4T5G2q.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+}
+
+.padding {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.login {
+    color:rgb(255, 255, 255);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.form-control  {
+    height: 60px;
+    border-radius: 10px;  
+    width: 350px; 
+    border: 1px rgb(0, 0, 0) solid;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+
+}
+
+.btn {
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 15px;
+    border: 1px rgb(0, 0, 0) solid;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.texto-cadastro{
+    color: aliceblue;
+    font-size: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.ladoforms{
+    background-color: rgba(212, 40, 63, 0.26);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px rgb(0, 0, 0) solid;
+}

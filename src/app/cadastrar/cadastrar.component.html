@@ -1,67 +1,64 @@
-<div class="container-fluid">
+  
+<div class = "bg flex"> 
+  
+  <div class = "lado-forms col-md-6"> 
 
-  <div class="row">
+    <h1 class="text-center">Cadastro</h1>
 
-    <div class="col-md-6" id='img-bg'></div>
-
-    <div class="col-md-6 mt-5 mb-5">
-
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-10">
-
-          <h1 class="text-center">Cadastro</h1>
-
-          <div class="form-group">
-            <label for="nome">Nome</label>
-            <input [(ngModel)]=usuario.nome class="form-control" type="text" name="nome" id="nome"
-              placeholder="Seu nome">
-          </div>
-
-          <div class="form-group">
-            <label for="emailContato">Email</label>
-            <input [(ngModel)]=usuario.emailContato class="form-control" type="text" name="emailContato"
-              id="emailContato" placeholder="Seu emailContato">
-          </div>
-
-          <div class="form-group">
-            <label for="senha">Senha</label>
-            <input (input) = 'confirmSenha($event)' class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha">
-          </div>
-
-          <div class="form-group">
-            <label for="confirmarSenha">Confirmar Senha</label>
-            <input [(ngModel)]='usuario.senha' class="form-control" type="password" name="confirmarSenha"
-              id="confirmarSenha" placeholder="Confirme sua senha">
-          </div>
-
-          <div class="form-group">
-            <label for="telContato">Telefone para contato</label>
-            <input [(ngModel)]='usuario.telContato' class="form-control" type="text" name="telContato" id="telContato"
-              placeholder="Seu Telefone para Contato">
-          </div>
-
-          <div class="form-group">
-            <label for="foto">Sua Foto</label>
-            <input [(ngModel)]='usuario.foto' class="form-control" type="text" name="foto" id="foto"
-              placeholder="Preencha com a Url de sua foto.">
-          </div>
-
-          <div class="form-group">
-            <label for="tipo">Tipo de Cadastro</label>
-            <select class="form-control" name="tipo" id="tipo" (change) = 'tipoUsuario($event)'>
-              <option>Selecione um tipo de usuário:</option>
-              <option value="Cliente">Cliente</option>
-              <option value="Vendedor">Vendedor</option>
-            </select>
-          </div>
-
-          <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-danger mr-4" routerLink="/login">Cancelar</button>
-            <button type="submit" class="btn btn-success" (click) = "cadastrar()" >Cadastrar</button>
-          </div>
-
-        </div>
-      </div>
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input [(ngModel)]=usuario.nome class="form-control" type="text" name="nome" id="nome"
+        placeholder="Seu nome">
     </div>
-  </div>
-</div>
+
+    <div class="form-group">
+      <label for="emailContato">Email</label>
+      <input [(ngModel)]=usuario.emailContato class="form-control" type="text" name="emailContato"
+        id="emailContato" placeholder="Seu emailContato">
+    </div>
+
+    <div class="form-group">
+      <label for="senha">Senha</label>
+      <input (input) = 'confirmSenha($event)' class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha">
+    </div>
+
+    <div class="form-group">
+      <label for="confirmarSenha">Confirmar Senha</label>
+      <input [(ngModel)]='usuario.senha' class="form-control" type="password" name="confirmarSenha"
+        id="confirmarSenha" placeholder="Confirme sua senha">
+    </div>
+
+    <div class="form-group">
+      <label for="telContato">Telefone para contato</label>
+      <input [(ngModel)]='usuario.telContato' class="form-control" type="text" name="telContato" id="telContato"
+        placeholder="Seu Telefone para Contato">
+    </div>
+
+    <div class="form-group">
+      <label for="foto">Sua Foto</label>
+      <input [(ngModel)]='usuario.foto' class="form-control" type="text" name="foto" id="foto"
+        placeholder="Preencha com a Url de sua foto.">
+    </div>
+
+    <div class="form-group">
+      <label for="tipo">Tipo de Cadastro</label>
+      <select class="form-control" name="tipo" id="tipo" (change) = 'tipoUsuario($event)'>
+        <option>Selecione um tipo de usuário:</option>
+        <option value="Cliente">Cliente</option>
+        <option value="Vendedor">Vendedor</option>
+      </select>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="btn btn-danger mr-4" routerLink="/login">Cancelar</button>
+      <button type="submit" class="btn btn-success" (click) = "cadastrar()" >Cadastrar</button>
+    </div>
+
+  </div> <!--Lado Forms-->
+
+  <div class = "col-md-6"> 
+
+
+  </div> <!--Lado Foto-->
+
+</div> <!--BG Foto-->

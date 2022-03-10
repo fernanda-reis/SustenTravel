@@ -1,0 +1,42 @@
+/*Fontes*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+.form-control  {
+    height: 40px;
+    border-radius: 10px;  
+    width: 350px; 
+    border: 1px rgb(0, 0, 0) solid;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+
+}
+
+.btn {
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 15px;
+    border: 1px rgb(0, 0, 0) solid;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.lado-forms{
+    background-color: rgba(143, 141, 140, 0.726);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px rgb(0, 0, 0) solid;
+    min-height: 100vh;
+}
+
+.flex  {
+    display: flex;
+    flex-direction: row;
+}
+
+.bg {
+    background-image: url(https://imgur.com/nql3WLB.jpeg);
+    background-size: cover;
+}
