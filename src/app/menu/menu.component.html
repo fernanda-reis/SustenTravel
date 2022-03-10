@@ -1,23 +1,28 @@
 <nav class="navbar navbar-expand-lg ">
-  <a class="navbar-brand ml-5 logo" href="#"><img src="https://imgur.com/zJh39Rw.png" alt="" width="50%"></a>
+  <div class=" d-flex justify-content-start"></div>
+  <a class="navbar-brand" href="#">
+    <img width="10%" src="https://imgur.com/zJh39Rw.png" alt="Logo SustenTravel">
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon">
+      <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+  </span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav mx-5">
       <li class="nav-item">
-        <a class="nav-link icon" routerLink="/inicio">
-          <i class="fa fa-home d-flex flex-column align-items-center icon" aria-hidden="true"></i>
+        <a class="nav-link icon d-flex flex-column align-items-center" routerLink="/inicio">
+          <i class="fa fa-home " aria-hidden="true"></i>
           Inicio<span class="sr-only">(current)</span>
         </a>
       </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle icon" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+        <a class="nav-link dropdown-toggle icon d-flex flex-column align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
           aria-expanded="false">
-          <i class="fa fa-globe d-flex flex-column align-items-center icon" aria-hidden="true"></i>
+          <i class="fa fa-globe" aria-hidden="true"></i>
           Explore
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -39,14 +44,14 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link icon" routerLink="sobre">
-          <i class="fa fa-leaf d-flex flex-column align-items-center icon" aria-hidden="true"></i>
+        <a class="nav-link icon d-flex flex-column align-items-center" routerLink="sobre">
+          <i class="fa fa-leaf" aria-hidden="true"></i>
           Sobre nós</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link icon" routerLink="contato">
-          <i class="fa fa-phone d-flex flex-column align-items-center icon" aria-hidden="true"></i>
+        <a class="nav-link icon d-flex flex-column align-items-center" routerLink="contato">
+          <i class="fa fa-phone" aria-hidden="true"></i>
           Contato</a>
       </li>
     </ul>
