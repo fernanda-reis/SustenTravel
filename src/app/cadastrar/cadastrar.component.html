@@ -1,7 +1,7 @@
-  
-<div class = "bg flex"> 
-  
-  <div class = "lado-forms col-md-6"> 
+
+<div class = "bg flex">
+
+  <div class = "lado-forms col-md-6">
 
     <h1 class="text-center">Cadastro</h1>
 
@@ -14,12 +14,13 @@
     <div class="form-group">
       <label for="emailContato">Email</label>
       <input [(ngModel)]=usuario.emailContato class="form-control" type="text" name="emailContato"
-        id="emailContato" placeholder="Seu emailContato">
+        id="emailContato" placeholder="example@email.com">
     </div>
 
     <div class="form-group">
       <label for="senha">Senha</label>
       <input (input) = 'confirmSenha($event)' class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha">
+      <span class="small">*Mínimo 8 caracteres</span>
     </div>
 
     <div class="form-group">
@@ -37,14 +38,14 @@
     <div class="form-group">
       <label for="foto">Sua Foto</label>
       <input [(ngModel)]='usuario.foto' class="form-control" type="text" name="foto" id="foto"
-        placeholder="Preencha com a Url de sua foto.">
+        placeholder="Preencha com a URL de sua foto">
     </div>
 
     <div class="form-group">
       <label for="tipo">Tipo de Cadastro</label>
       <select class="form-control" name="tipo" id="tipo" (change) = 'tipoUsuario($event)'>
-        <option>Selecione um tipo de usuário:</option>
-        <option value="Cliente">Cliente</option>
+        <option>Selecione um tipo de usuário</option>
+        <option value="Cliente">Viajante</option>
         <option value="Vendedor">Vendedor</option>
       </select>
     </div>
@@ -56,7 +57,7 @@
 
   </div> <!--Lado Forms-->
 
-  <div class = "col-md-6"> 
+  <div class = "col-md-6">
 
 
   </div> <!--Lado Foto-->

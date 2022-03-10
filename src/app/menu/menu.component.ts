@@ -10,8 +10,9 @@ import { AuthService } from '../service/auth.service';
 })
 export class MenuComponent implements OnInit {
 
-  nome = environment.nome
-  foto = environment.foto
+  nome: string
+  foto: string
+  tipo: string
 
   constructor(
     private router: Router,
@@ -19,6 +20,17 @@ export class MenuComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+  }
+
+  logado(){
+    if(this.auth.logado()){
+      this.nome = environment.nome
+      this.foto = environment.foto
+      this.tipo = environment.tipo
+      return true
+    } else {
+      return false
+    }
   }
 
   sair() {

@@ -16,7 +16,7 @@ import { ProdutoService } from '../service/produto.service';
 export class MeusProdutosComponent implements OnInit {
   produto: Produto = new Produto();
   categoria: Categoria = new Categoria();
-  idCategoria: number
+  idCategoria: number;
 
   user: Usuario = new Usuario();
   emailUser = environment.email;
@@ -24,8 +24,7 @@ export class MeusProdutosComponent implements OnInit {
   produtoEdit: Produto = new Produto();
   categoriaEdit: Categoria = new Categoria();
 
-  idProdutoDeletar:number
-
+  idProdutoDeletar: number;
 
   constructor(
     private authService: AuthService,
@@ -35,6 +34,11 @@ export class MeusProdutosComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    window.scroll(0,0)
+    if (environment.token == ''){
+      alert('Sua sessão expirou! Faça o login novamente.')
+     this.router.navigate(['/entrar'])
+     }
     this.authService.refreshToken();
     this.findByEmailUser();
   }
@@ -42,9 +46,7 @@ export class MeusProdutosComponent implements OnInit {
   findProdutoById(idproduto: number) {
     this.produtoService.getProdutoById(idproduto).subscribe((resp: Produto) => {
       this.produtoEdit = resp;
-      console.log(this.produtoEdit);
     });
-    console.log('id produto', idproduto);
   }
 
   findCategoriaById(idcategoria: number) {
@@ -53,7 +55,6 @@ export class MeusProdutosComponent implements OnInit {
       .subscribe((resp: Categoria) => {
         this.categoriaEdit = resp;
       });
-    console.log(this.categoriaEdit);
   }
 
   findByEmailUser() {
@@ -61,7 +62,6 @@ export class MeusProdutosComponent implements OnInit {
       .getByEmailUser(this.emailUser)
       .subscribe((resp: Usuario) => {
         this.user = resp;
-        // console.log(this.user);
       });
   }
 
@@ -74,21 +74,19 @@ export class MeusProdutosComponent implements OnInit {
         this.user.emailContato = this.emailUser;
         this.produto.usuario = this.user;
 
-
         this.produto.categoria = this.categoria;
-        console.log(this.produto);
 
-        this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
-          this.produto = resp;
-        });
-
+        this.produtoService
+          .postProduto(this.produto)
+          .subscribe((resp: Produto) => {
+            this.produto = resp;
+          });
       });
 
     alert('Passeio cadastrado com sucesso!');
     this.produto = new Produto();
     this.categoria = new Categoria();
   }
-
 
   atualizar() {
     this.produtoService
@@ -111,11 +109,12 @@ export class MeusProdutosComponent implements OnInit {
     this.idProdutoDeletar = id;
   }
 
-  deletar(){
-    this.categoriaService.deleteCategoria(this.idProdutoDeletar).subscribe(() => {
-      alert('Produto apagado com sucesso!')
-      this.findByEmailUser();
-    })
+  deletar() {
+    this.categoriaService
+      .deleteCategoria(this.idProdutoDeletar)
+      .subscribe(() => {
+        alert('Produto apagado com sucesso!');
+        this.findByEmailUser();
+      });
   }
-
 }

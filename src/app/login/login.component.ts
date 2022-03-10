@@ -20,9 +20,6 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
-    window.scroll(0, 0)
-
   }
 
   entrar() {
@@ -39,6 +36,7 @@ export class LoginComponent implements OnInit {
         environment.id = this.userLogin.id;
 
         this.router.navigate(['/inicio'])
+
       },
 
       error: (erro) => {

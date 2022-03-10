@@ -9,7 +9,7 @@
 
 
     <div class=" container produtos my-5">
-
+      <h5 class="text-center">{{mensagem}}</h5>
       <div class="card-deck">
         <div class="cards m-3 d-flex justify-content-around" *ngFor="let item of listaCategoria">
         <div class="card m-3" *ngFor="let produto of item.produtos">
@@ -26,20 +26,6 @@
             <small>Telefone: {{produto.usuario.telContato}}</small>
           </div>
         </div>
-        <!-- <div class="card ">
-          <img src="https://i.imgur.com/E9dN39y.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="d-flex justify-content-end">Valor: <span class="valor-produto">200,00</span></p>
-          </div>
-          <div class="card-footer d-flex flex-column">
-            <h6>Entre em contato com o vendedor:</h6>
-            <small >Fernanda</small>
-            <small >fernanda@email.com</small>
-            <small >(11)1921923</small>
-          </div>
-        </div> -->
       </div>
     </div>
 </div>

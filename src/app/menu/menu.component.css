@@ -16,6 +16,10 @@ img {
   margin: 0
 }
 
+.foto-usuario{
+  width: 50px;
+}
+
 .navbar {
   background-color: rgb(189, 192, 192);
 

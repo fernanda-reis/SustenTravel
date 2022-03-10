@@ -8,19 +8,12 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class InicioComponent implements OnInit {
 
-  teste: boolean;
 
   constructor(
   ) { }
 
   ngOnInit(){
-  }
-
-  entrar()  {
-
-    this.teste = true;
-    
-      console.log(this.teste);
+    window.scroll(0,0)
   }
 
   customOptions: OwlOptions = {

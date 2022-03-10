@@ -30,7 +30,7 @@ export class CadastrarComponent implements OnInit {
 
     this.confirmarSenha = event.target.value
 
-  }  
+  }
 
   tipoUsuario(event: any) {
 
@@ -47,18 +47,10 @@ export class CadastrarComponent implements OnInit {
 
       else {
 
-        /*console.log(this.usuario.emailContato)
-        console.log(this.usuario.foto)
-        console.log(this.usuario.nome)
-        console.log(this.usuario.senha)
-        console.log(this.usuario.telContato)
-        console.log(this.usuario.tipo)*/
-
-
           this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
             this.usuario = resp
             this.router.navigate(["/login"])
-            alert('Usuario cadastrado com sucesso')
+            alert('Usuario cadastrado com sucesso! Faça o login para continuar.')
           })
       }
   }

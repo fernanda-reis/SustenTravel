@@ -11,7 +11,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mx-5">
+    <ul class="navbar-nav mx-4">
       <li class="nav-item">
         <a class="nav-link icon d-flex flex-column align-items-center" routerLink="/inicio">
           <i class="fa fa-home " aria-hidden="true"></i>
@@ -39,7 +39,7 @@
           <a class="dropdown-item" [routerLink]="['/produtos', 'Sudeste']">Sudeste</a>
           <a class="dropdown-item" [routerLink]="['/produtos', 'Sul']">Sul</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Passeio Sustentável</a>
+          <a class="dropdown-item" [routerLink]="['/produtos', 'sustentavel']">Passeio Sustentável</a>
         </div>
       </li>
 
@@ -57,25 +57,27 @@
     </ul>
 
 
-    <ul class="navbar-nav ml-auto d-flex align-items-center" *ngIf="auth.logado()">
+    <ul class="navbar-nav ml-auto d-flex align-items-center" *ngIf="logado()">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle icon" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
           aria-expanded="false">
           Olá, {{nome}}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div *ngIf="tipo == 'Vendedor'">
           <a class="dropdown-item" routerLink="meus-produtos">Meus Passeios</a>
           <div class="dropdown-divider"></div>
+        </div>
           <a class="dropdown-item" href="#">Editar Perfil</a>
           <a class="dropdown-item" (click)='sair()'>Sair</a>
         </div>
       </li>
       <li class="nav-item active">
-        <img src="{{foto}}" alt="Foto do usuário" width="50px" height="50px" class="rounded-circle">
+        <img src="{{foto}}" alt="Foto do usuário" class="foto-usuario rounded-circle">
       </li>
     </ul>
 
-    <ul class="navbar-nav ml-auto d-flex align-items-center" *ngIf="auth.logado() == false">
+    <ul class="navbar-nav ml-auto d-flex align-items-center" *ngIf="logado() == false">
       <li class="nav-item">
         <a class="nav-link icon" routerLink="login">
           Login</a>

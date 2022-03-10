@@ -6,7 +6,9 @@
   height: 50vh;
   color: #ffff;
 }
-
+.produtos {
+  min-height: 100vh-(470px);
+}
 .cards {
   max-width: 30%;
 }
