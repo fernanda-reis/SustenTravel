@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
 
 img {
     border: 2px solid black;
@@ -121,9 +122,28 @@ opacity: 0.5;
 .margemturismo{
     margin-left: 25px;
     margin-right: 25px;
+    margin-top: 25px;
 }
 
 .texto-inferior {
 
     font-size: 25px;
+}
+
+.textoexplicativo{
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    font-size: 25px;
+}
+
+.chamado {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 65px;
+}
+
+.htext {
+    font-size: 35px;
+    margin-top: 25px;
+    font-family: 'Syne Mono', monospace;
 }
