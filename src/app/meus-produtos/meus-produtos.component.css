@@ -6,3 +6,7 @@ hr {
   background-color:#d6d6d6;
   height: 1px;
 }
+
+.card-img-top {
+  height: 280px;
+}

@@ -16,6 +16,11 @@
 .card {
   border: 1px solid #86da4e;
 }
+
+.card-img-top {
+  height: 280px;
+}
+
 .card-footer {
   background-color: #86da4e;
 }

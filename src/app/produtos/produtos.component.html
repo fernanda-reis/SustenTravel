@@ -10,7 +10,7 @@
 
     <div class=" container produtos my-5">
       <h5 class="text-center">{{mensagem}}</h5>
-      <div class="card-deck">
+      <div class="card-deck flex-wrap">
         <div class="cards m-3 d-flex justify-content-around" *ngFor="let item of listaCategoria">
         <div class="card m-3" *ngFor="let produto of item.produtos">
           <img src="{{produto.urlImagem}}" class="card-img-top" alt="...">

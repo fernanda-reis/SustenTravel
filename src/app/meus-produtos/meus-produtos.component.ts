@@ -34,11 +34,11 @@ export class MeusProdutosComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    window.scroll(0,0)
-    if (environment.token == ''){
-      alert('Sua sessão expirou! Faça o login novamente.')
-     this.router.navigate(['/entrar'])
-     }
+    window.scroll(0, 0);
+    if (environment.token == '') {
+      alert('Sua sessão expirou! Faça o login novamente.');
+      this.router.navigate(['/login']);
+    }
     this.authService.refreshToken();
     this.findByEmailUser();
   }
@@ -78,14 +78,15 @@ export class MeusProdutosComponent implements OnInit {
 
         this.produtoService
           .postProduto(this.produto)
-          .subscribe((resp: Produto) => {
-            this.produto = resp;
+          .subscribe((resp2: Produto) => {
+            this.produto = resp2;
+            this.produto = new Produto();
+            this.categoria = new Categoria();
+            alert('Passeio cadastrado com sucesso!');
+            this.findByEmailUser();
           });
       });
 
-    alert('Passeio cadastrado com sucesso!');
-    this.produto = new Produto();
-    this.categoria = new Categoria();
   }
 
   atualizar() {
@@ -97,12 +98,14 @@ export class MeusProdutosComponent implements OnInit {
 
     this.categoriaService
       .putCategoria(this.categoriaEdit)
-      .subscribe((resp: Categoria) => {
-        this.categoriaEdit = resp;
-      });
+      .subscribe((resp2: Categoria) => {
+        this.categoriaEdit = resp2;
+        this.categoriaEdit = new Categoria()
+        this.produtoEdit = new Produto()
 
-    alert('Produto atualizado com sucesso!');
-    this.findByEmailUser();
+      });
+      alert('Produto atualizado com sucesso!');
+      this.findByEmailUser();
   }
 
   atribuirId(id: number) {
