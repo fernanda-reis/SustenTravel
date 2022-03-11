@@ -10,14 +10,15 @@
 
     <div class=" container produtos my-5">
       <h5 class="text-center">{{mensagem}}</h5>
-      <div class="card-deck flex-wrap">
-        <div class="cards m-3 d-flex justify-content-around" *ngFor="let item of listaCategoria">
+      <div class="card-deck ">
+        <div class="cards m-3 d-flex flex-wrap justify-content-around" *ngFor="let item of listaCategoria">
         <div class="card m-3" *ngFor="let produto of item.produtos">
           <img src="{{produto.urlImagem}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{produto.nomeProduto}}</h5>
             <p class="card-text">{{produto.descricao}}</p>
-            <p class="d-flex justify-content-end">Valor: <span class="valor-produto"> {{produto.valor}}</span></p>
+              <p class="card-text">{{item.regiao}} - {{item.tipo}}</p>
+              <p class="d-flex justify-content-end">Valor: <span class="valor-produto"> {{produto.valor}}</span></p>
           </div>
           <div class="card-footer d-flex flex-column">
             <h6>Entre em contato com o vendedor</h6>

@@ -11,6 +11,7 @@
 }
 .cards {
   max-width: 30%;
+    min-width: 330px;
 }
 
 .card {

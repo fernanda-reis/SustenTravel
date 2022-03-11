@@ -7,19 +7,8 @@
         role="tablist"
       >
         <a
-          class="nav-link active"
-          id="nav-texto-tab"
-          data-toggle="tab"
-          href="#nav-texto"
-          role="tab"
-          aria-controls="nav-texto"
-          aria-selected="true"
-          >SustenTravel</a
-        >
-        <a
           (click)="findByEmailUser()"
           class="nav-link"
-          Z
           id="nav-meus-produtos-tab"
           data-toggle="tab"
           href="#nav-meus-produtos"
@@ -41,15 +30,6 @@
       </div>
     </nav>
     <div class="tab-content" id="nav-tabContent">
-      <div
-        class="tab-pane fade show active"
-        id="nav-texto"
-        role="tabpanel"
-        aria-labelledby="nav-texto-tab"
-      >
-        TEXTO
-      </div>
-
       <!--CARDS DE PRODUTOS-->
       <div
         class="tab-pane fade"
@@ -80,11 +60,14 @@
                   >
                     Editar
                   </button>
-                  <button class="btn btn-danger m-2"
-                  data-toggle="modal"
-                  data-target="#deletarProduto"
-                  (click) = atribuirId(produto.categoria.idCategoria)>
-                  Excluir</button>
+                  <button
+                    class="btn btn-danger m-2"
+                    data-toggle="modal"
+                    data-target="#deletarProduto"
+                    (click)="atribuirId(produto.categoria.idCategoria)"
+                  >
+                    Excluir
+                  </button>
                 </div>
               </div>
             </div>
@@ -353,7 +336,6 @@
             rows="4"
           ></textarea>
         </div>
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">
@@ -371,10 +353,6 @@
     </div>
   </div>
 </div>
-
-
-
-
 
 <div
   class="modal fade"
@@ -401,7 +379,6 @@
       <div class="modal-body">
         <!--CORPO MODAL-->
         <p>Tem certeza de que deseja excluir o passeio?</p>
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">
