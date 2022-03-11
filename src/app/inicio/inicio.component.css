@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
 img {
     border: 2px solid black;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .bg-topo {
@@ -28,8 +34,8 @@ img {
 }
 
 .texto-topo {
-    font-size: 30px;
-
+    font-size: 35px;
+    font-family:sans-serif;
 }
 
 .texto-centro-topo {
@@ -57,10 +63,11 @@ img {
 }
 
 .imagem img {
-    min-width: 250px;
+    width: 250px;
     height: 250px;
     object-fit: cover;
-    border: 0px;
+    border: 2px black solid;
+    padding: 0px;
   }
 
 button {
@@ -81,7 +88,42 @@ opacity: 0.5;
 
 .foto img {
     border-radius: 10px;
-    max-width: 270px;
-    height: 250px;
+    max-width: 300px;
+    height: 300px;
     object-fit: cover;
+}
+
+.margem {
+
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.bgfotopato {
+    background-image: url(https://jooinn.com/images/bright-freen-agriculture-4.png);
+    background-size: cover;
+    border: 2px black solid;
+}
+
+.turismo {
+    font-size: 30px;
+    text-align: justify;
+    color: rgb(0, 0, 0);
+    font-family: 'Arvo', serif;    
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    }
+
+.titulotopo {
+    font-size: 35px;
+}
+
+.margemturismo{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.texto-inferior {
+
+    font-size: 25px;
 }
