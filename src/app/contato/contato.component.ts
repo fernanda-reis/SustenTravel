@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContatoComponent implements OnInit {
 
+  div = (<HTMLDivElement>document.querySelector('#produto'))
+  
   constructor() { }
 
   ngOnInit(): void {

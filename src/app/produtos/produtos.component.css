@@ -9,6 +9,10 @@
 .produtos {
   min-height: 100vh-(470px);
 }
+
+.subtexto {
+  font-size: 25px;
+}
 .cards {
   max-width: 30%;
     min-width: 330px;

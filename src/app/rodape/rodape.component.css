@@ -16,14 +16,18 @@ ul.social-network li{
 }
 
 .fa:hover {
-  opacity: 0.7;
+  color: white;
+}
+
+h4 {
+  color:rgb(0, 0, 0)
 }
 
 .bg {
-  background-color: rgb(189, 192, 192);
+  background: #86DA4E;
 }
 
 .bg2 {
-  background-color:rgb(117, 121, 121);
+  background: #28A745;
 }
 

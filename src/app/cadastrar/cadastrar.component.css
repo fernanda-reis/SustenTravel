@@ -4,8 +4,8 @@
 
 .form-control  {
     height: 40px;
-    border-radius: 10px;  
-    width: 350px; 
+    border-radius: 10px;
+    width: 350px;
     border: 1px rgb(0, 0, 0) solid;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 17px;
@@ -39,4 +39,12 @@
 .bg {
     background-image: url(https://imgur.com/nql3WLB.jpeg);
     background-size: cover;
+}
+
+.cadastro {
+  color:rgb(255, 255, 255);
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 40px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
 }
