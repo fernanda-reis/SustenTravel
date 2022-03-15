@@ -5,12 +5,25 @@
   background-size: cover;
   min-height: 80vh;
   max-width: 100vw;
+  color: #000000;
+  font-weight: bolder;
 }
+
 
 .sobre p {
   font-size: 18px;
-  color: #000000;
   text-align: justify;
+}
+
+.valores p {
+  text-align: center;
+}
+
+ul {
+  font-size: 18px;
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
 }
 
 .card {
