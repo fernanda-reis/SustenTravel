@@ -8,7 +8,6 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class InicioComponent implements OnInit {
 
-
   constructor(
   ) { }
 
