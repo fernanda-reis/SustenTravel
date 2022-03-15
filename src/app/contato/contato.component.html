@@ -1,13 +1,13 @@
 <div class="container">
   <main class="row my-5 d-flex justify-content-around align-items-start">
-
     <form class="col-md-5">
       <h2>Fale conosco</h2>
-      <hr>
+      <hr />
 
       <div class="form-group">
-        <label for="name">Nome*</label>
-        <input type="name" class="form-control" id="name" />
+        <label for="name">Nome Completo*</label>
+        <input type="name" class="form-control" id="nome" (keyup)="validarNome()" />
+        <div id="txt_nome"></div>
       </div>
       <div class="form-group">
         <label for="email">Email*</label>
@@ -16,32 +16,34 @@
           class="form-control"
           id="email"
           placeholder="name@example.com"
+          (keyup)="validarEmail()"
         />
+        <div id="txt_email"></div>
       </div>
       <div class="form-group">
         <label for="telefone">Telefone/Whatsapp*</label>
-        <input type="text" class="form-control" id="text" />
+        <input type="text" class="form-control" id="tel" placeholder="(00) 00000-0000"
+        (keyup)="validarTel()"/>
+        <div id="txt_tel"></div>
       </div>
       <div class="form-group">
         <label for="mensagem">Mensagem*</label>
-        <textarea class="form-control" id="mensagem" rows="3"></textarea>
+        <textarea class="form-control" id="mensagem" rows="3"
+        (keyup)="validarMensagem()"></textarea>
+        <div id="txt_mensagem"></div>
       </div>
 
-      <button class="mb-3 btn btn-primary">Enviar</button>
+      <button class="mb-3 btn btn-primary" (click)="enviar()">Enviar</button>
     </form>
 
     <section class="col-md-5">
       <h2>Localização</h2>
-      <hr>
-      <p class="mb-0">
-        Av. Paulista 1200, 7ºandar/sala 701/710 - Campo Belo
-      </p>
-      <p class="mb-3">
-        São Paulo/ SP - 01310-100
-      </p>
+      <hr />
+      <p class="mb-0">Av. Paulista 1200, 7ºandar/sala 701/710 - Campo Belo</p>
+      <p class="mb-3">São Paulo/ SP - 01310-100</p>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116602.81939946378!2d-46.57207309606066!3d-24.036773491880215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1f9dd9bf50e5%3A0x83b44c5ff623bb51!2sPraia%20Grande%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1645468677472!5m2!1spt-BR!2sbr"
-        width="500"
+        width="400"
         height="380"
         style="border: 0"
         allowfullscreen=""
