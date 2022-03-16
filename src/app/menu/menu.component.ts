@@ -13,6 +13,7 @@ export class MenuComponent implements OnInit {
   nome: string
   foto: string
   tipo: string
+  id: number
 
   constructor(
     private router: Router,
@@ -27,6 +28,7 @@ export class MenuComponent implements OnInit {
       this.nome = environment.nome
       this.foto = environment.foto
       this.tipo = environment.tipo
+      this.id = environment.id
       return true
     } else {
       return false

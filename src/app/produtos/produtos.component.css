@@ -13,6 +13,25 @@
 .subtexto {
   font-size: 25px;
 }
+
+.busca input {
+  width: 300px;
+}
+
+.btn-busca {
+  border-radius: 50%;
+  background-color: #9C3EDF;
+  color: white;
+  border: 1px solid white;
+  width: 40px;
+  padding: 5px;
+
+}
+
+.btn-busca:hover {
+  background-color: #000000;
+}
+
 .cards {
   max-width: 30%;
     min-width: 330px;

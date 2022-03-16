@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
+import { EditUsuarioComponent } from './edit-usuario/edit-usuario.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MeusProdutosComponent } from './meus-produtos/meus-produtos.component';
     CadastrarComponent,
     ProdutosComponent,
     MeusProdutosComponent,
+    EditUsuarioComponent,
   ],
   imports: [
     BrowserModule,
