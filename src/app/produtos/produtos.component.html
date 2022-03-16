@@ -2,8 +2,20 @@
 
     <div class="container-fluid d-flex">
       <div class="col-md-6 m-5 d-flex flex-column justify-content-center">
-      <h1>{{ nome }}</h1>
-      <p class="subtexto">Aproveite os melhores passeios disponíveis para a categoria {{nome}}!</p>
+      <h1 class = "margin">{{ nome }}</h1>
+      <p class="subtexto margin">Os melhores passeios para o que você busca</p>
+      <p class="subtexto margin">Junto á nossa empresa, você encontra passeios
+        dos mais diversos tipos, sempre tendo a oportunidade de ajudar quem precisa!
+        Acesse nossos passeios sustentavéis!
+        
+      </p>
+
+      <p>
+
+        <button type="button" class="btn btn-light mt-2 ml-5" [routerLink]="['/produtos', 'sustentavel']">Quero Conhecer!</button>
+      
+      </p>
+      
     </div>
     </div>
 
@@ -39,5 +51,6 @@
       </div>
     </div>
 </div>
+
 
 

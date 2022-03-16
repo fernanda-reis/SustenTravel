@@ -147,3 +147,14 @@ opacity: 0.5;
     margin-top: 25px;
     font-family: 'Syne Mono', monospace;
 }
+
+.divcarousel img {
+    height: 500px;
+    border: 0px;
+    object-fit: cover;
+}
+
+.textcarousel {
+    color: rgb(255, 255, 255);
+}
+
