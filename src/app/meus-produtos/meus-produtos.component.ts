@@ -90,22 +90,37 @@ export class MeusProdutosComponent implements OnInit {
   }
 
   atualizar() {
-    this.produtoService
-      .putProduto(this.produtoEdit)
-      .subscribe((resp: Produto) => {
-        this.produtoEdit = resp;
-      });
+
+    console.log(this.categoriaEdit)
+    console.log(this.produtoEdit)
+
+    this.categoriaEdit.produtos = []
 
     this.categoriaService
       .putCategoria(this.categoriaEdit)
       .subscribe((resp2: Categoria) => {
         this.categoriaEdit = resp2;
-        this.categoriaEdit = new Categoria()
-        this.produtoEdit = new Produto()
+
+
+
+        this.produtoService
+        .putProduto(this.produtoEdit)
+        .subscribe((resp: Produto) => {
+          this.produtoEdit = resp;
+          this.categoriaEdit = new Categoria()
+          this.produtoEdit = new Produto()
+          
+          console.log(this.produtoEdit)
+
+        });
+
+
+        alert('Produto atualizado com sucesso!');
+        this.findByEmailUser();
+
 
       });
-      alert('Produto atualizado com sucesso!');
-      this.findByEmailUser();
+
   }
 
   atribuirId(id: number) {

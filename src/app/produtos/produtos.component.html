@@ -1,56 +1,64 @@
+<div class="container-fluid d-flex">
+  <div class="col-md-6 m-5 d-flex flex-column justify-content-center">
+    <h1 class="margin">{{ nome }}</h1>
+    <p class="subtexto margin">
+      Encontre passeios dos mais diversos tipos, sempre tendo a oportunidade de
+      ajudar quem precisa!
+    </p>
 
-
-    <div class="container-fluid d-flex">
-      <div class="col-md-6 m-5 d-flex flex-column justify-content-center">
-      <h1 class = "margin">{{ nome }}</h1>
-      <p class="subtexto margin">Os melhores passeios para o que você busca</p>
-      <p class="subtexto margin">Junto á nossa empresa, você encontra passeios
-        dos mais diversos tipos, sempre tendo a oportunidade de ajudar quem precisa!
-        Acesse nossos passeios sustentavéis!
-        
-      </p>
-
-      <p>
-
-        <button type="button" class="btn btn-light mt-2 ml-5" [routerLink]="['/produtos', 'sustentavel']">Quero Conhecer!</button>
-      
-      </p>
-      
+    <div *ngIf="nome != 'Passeio Sustentável'">
+      <p class="margin subtexto">Conheça nossos passeios sustentavéis!</p>
+      <button
+        type="button"
+        class="btn btn-conhecer mt-2 ml-5"
+        [routerLink]="['/produtos', 'sustentavel']"
+      >
+        Quero Conhecer!
+      </button>
     </div>
-    </div>
+  </div>
+</div>
 
+<div class="container produtos my-5">
+  <div class="my-5 row d-flex justify-content-center">
+    <form class="form-inline busca">
+      <input
+        #passeionome
+        class="form-control form-control-sm mx-3"
+        type="text"
+        placeholder="Pesquise um passeio pelo nome"
+        aria-label="Search"
+        (keyup)="limpa(passeionome.value)"
+      />
+      <button class="btn-busca" (click)="busca(passeionome.value)">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </button>
+    </form>
+  </div>
 
-    <div class=" container produtos my-5">
-
-      <div class="my-5 row d-flex justify-content-center">
-        <form class="form-inline busca">
-          <input #passeionome class="form-control form-control-sm mx-3" type="text" placeholder="Pesquise um passeio pelo nome"
-          aria-label="Search" (keyup)=limpa(passeionome.value)>
-          <button class="btn-busca" (click)="busca(passeionome.value)"><i class="fa fa-search" aria-hidden="true"></i></button>
-        </form>
-      </div>
-
-      <h5 class="text-center">{{mensagem}}</h5>
-      <div class="card-deck ">
-        <div class="cards m-3 d-flex flex-wrap justify-content-around" *ngFor="let item of listaCategoria">
-        <div class="card m-3" *ngFor="let produto of item.produtos">
-          <img src="{{produto.urlImagem}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{produto.nomeProduto}}</h5>
-            <p class="card-text">{{produto.descricao}}</p>
-              <p class="card-text">{{item.regiao}} - {{item.tipo}}</p>
-              <p class="d-flex justify-content-end">Valor: <span class="valor-produto"> {{produto.valor}}</span></p>
-          </div>
-          <div class="card-footer d-flex flex-column">
-            <h6>Entre em contato com o vendedor</h6>
-            <small>{{produto.usuario.nome}}</small>
-            <small>{{produto.usuario.emailContato}}</small>
-            <small>Telefone: {{produto.usuario.telContato}}</small>
-          </div>
+  <h5 class="text-center">{{ mensagem }}</h5>
+  <div class="card-deck">
+    <div
+      class="cards m-3 d-flex flex-wrap justify-content-around"
+      *ngFor="let item of listaCategoria"
+    >
+      <div class="card m-3" *ngFor="let produto of item.produtos">
+        <img src="{{ produto.urlImagem }}" class="card-img-top img-fluid" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ produto.nomeProduto }}</h5>
+          <p class="card-text">{{ produto.descricao }}</p>
+          <p class="card-text">{{ item.regiao }} - {{ item.tipo }}</p>
+          <p class="d-flex justify-content-end">
+            Valor: <span class="valor-produto"> {{ produto.valor }}</span>
+          </p>
+        </div>
+        <div class="card-footer d-flex flex-column">
+          <h6>Entre em contato com o vendedor</h6>
+          <small>{{ produto.usuario.nome }}</small>
+          <small>{{ produto.usuario.emailContato }}</small>
+          <small>Telefone: {{ produto.usuario.telContato }}</small>
         </div>
       </div>
     </div>
+  </div>
 </div>
-
-
-

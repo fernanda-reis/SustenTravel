@@ -10,4 +10,5 @@ hr {
 
 .card-img-top {
   height: 280px;
+  object-fit: cover;
 }

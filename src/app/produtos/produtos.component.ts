@@ -40,7 +40,7 @@ export class ProdutosComponent implements OnInit {
   buscarCategorias() {
     if (
       this.nome == 'Aldeias' ||
-      this.nome == 'Camping' ||
+      this.nome == 'Radical' ||
       this.nome == 'Litoral' ||
       this.nome == 'Rural' ||
       this.nome == 'Urbano'
@@ -57,6 +57,9 @@ export class ProdutosComponent implements OnInit {
     } else if (this.nome == 'sustentavel') {
       this.getAllCategoriasPrioridade();
       this.nome = 'Passeio Sustentável';
+    } else if (this.nome == 'todos'){
+      this.getAllCategorias()
+      this.nome = 'Todos os Passeios';
     }
   }
 

@@ -16,7 +16,7 @@
           <div class="carousel-caption d-none d-md-block">
             <h5></h5>
             <p></p>
-          </div>        
+          </div>
         </div>
         <div class="carousel-item">
           <img class="d-block w-100 centerimg" src="https://imgur.com/j3mjopp.jpeg" alt="Third slide">
@@ -35,37 +35,46 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-  
+
   </div>
 
   <div class = "container flex">
 
-  <div class = "col-md-6 mt-5 textoexplicativo">
+  <div class = "col-md-5 mt-5 textoexplicativo">
 
-    <p> Para você que ainda não conhece a iniciativa SusteTravel, saiba mais sobre nós assistindo ao nosso video institucional!</p>
+    <p> Para você que ainda não conhece a iniciativa SustenTravel, saiba mais sobre nós assistindo ao nosso video institucional!</p>
+
+  </div>
+
+  <div class = "col-md-5 mt-5 d-none d-md-block">
+
+    <iframe width="460" height="350" src="https://www.youtube.com/embed/6CwI5f9ttJI" title="YouTube video player"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
 
   </div>
 
-  <div class = "col-md-6 mt-5">
-
-    <iframe width="460" height="350" src="https://www.youtube.com/embed/6CwI5f9ttJI" title="YouTube video player" 
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe>    
+  <div class="col-md-6 mt-5 d-md-none d-xm-block">
+    <iframe width="300" height="250" src="https://www.youtube.com/embed/6CwI5f9ttJI" title="YouTube video player"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
 
   </div>
+
+
 
   </div>
 
   <div class = "container">
 
-  <h3 class = "text-left ml-2 margem"> Encontre passeios por tipo. </h3>
+  <h3 class = "text-left ml-2 margem"> Encontre passeios por tipo </h3>
 
   <div class = "carrousel-1 imagem">
 
   <owl-carousel-o [options] = "customOptions">
 
     <ng-template carouselSlide> <!-- Aldeias -->
-
+      <div class="slider">
       <a [routerLink]="['/produtos', 'Aldeias']">
 
         <img
@@ -75,11 +84,12 @@
 
       </a>
 
+    </div>
     </ng-template>
 
-    <ng-template carouselSlide> <!-- Camping -->
+    <ng-template carouselSlide> <!-- Radical -->
 
-      <a [routerLink]="['/produtos', 'Camping']">
+      <a [routerLink]="['/produtos', 'Radical']">
         <img
         class=""
         src="https://imgur.com/nQbsElT.jpg"
@@ -129,7 +139,7 @@
 
 </div> <!--Div Carrousel-1-->
 
-<h3 class = "text-left ml-2 margem"> Encontre passeios por região. </h3>
+<h3 class = "text-left ml-2 margem"> Encontre passeios por região </h3>
 
 <div class = "carrousel-2 imagem">
 
@@ -182,11 +192,11 @@
 
     </owl-carousel-o>
 
-     
+
 
 </div> <!--Div carrousel-2-->
 
-<div class = "container flex">
+<div class = "container flex py-5">
 
   <div class = "col-md-6 texto-inferior mt-5">
 

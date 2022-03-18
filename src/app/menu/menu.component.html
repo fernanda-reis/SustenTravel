@@ -26,11 +26,14 @@
           Explore
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/produtos', 'todos']">Todos os Passeios</a>
+          <a class="dropdown-item" [routerLink]="['/produtos', 'sustentavel']">Passeio Sustentável</a>
+          <div class="dropdown-divider"></div>
           <p class="dropdown-item">Por Tipos</p>
           <a class="dropdown-item" [routerLink]="['/produtos', 'Rural']">Rural</a>
           <a class="dropdown-item" [routerLink]="['/produtos', 'Litoral']">Litoral</a>
           <a class="dropdown-item" [routerLink]="['/produtos', 'Urbano']">Urbano</a>
-          <a class="dropdown-item" [routerLink]="['/produtos', 'Camping']">Camping</a>
+          <a class="dropdown-item" [routerLink]="['/produtos', 'Radical']">Radical</a>
           <a class="dropdown-item" [routerLink]="['/produtos', 'Aldeias']">Aldeia</a>
           <p class="dropdown-item">Por Região</p>
           <a class="dropdown-item" [routerLink]="['/produtos', 'Norte']">Norte</a>
@@ -38,8 +41,7 @@
           <a class="dropdown-item" [routerLink]="['/produtos', 'Centro-Oeste']">Centro-Oeste</a>
           <a class="dropdown-item" [routerLink]="['/produtos', 'Sudeste']">Sudeste</a>
           <a class="dropdown-item" [routerLink]="['/produtos', 'Sul']">Sul</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" [routerLink]="['/produtos', 'sustentavel']">Passeio Sustentável</a>
+
         </div>
       </li>
 

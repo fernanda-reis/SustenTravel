@@ -23,6 +23,12 @@ body{
     background-size: cover;
 }
 
+
+.slider a{
+  width: 500px;
+  background-color: red;
+}
+
 .flex{
 
     /*Flex-Box*/
@@ -32,6 +38,7 @@ body{
     align-items: center;
     justify-content: center;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 .texto-topo {
@@ -110,7 +117,7 @@ opacity: 0.5;
     font-size: 30px;
     text-align: justify;
     color: rgb(0, 0, 0);
-    font-family: 'Arvo', serif;    
+    font-family: 'Arvo', serif;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(0, 0, 0);
     }
