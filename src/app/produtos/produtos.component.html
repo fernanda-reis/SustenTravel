@@ -20,8 +20,8 @@
 </div>
 
 <div class="container produtos my-5">
-  <div class="my-5 row d-flex justify-content-center">
-    <form class="form-inline busca">
+  <div class="my-3 row d-flex justify-content-center">
+    <form class="form-inline busca d-flex justify-content-around">
       <input
         #passeionome
         class="form-control form-control-sm mx-3"
@@ -30,16 +30,16 @@
         aria-label="Search"
         (keyup)="limpa(passeionome.value)"
       />
-      <button class="btn-busca" (click)="busca(passeionome.value)">
+      <button class="btn-busca my-3" (click)="busca(passeionome.value)">
         <i class="fa fa-search" aria-hidden="true"></i>
       </button>
     </form>
   </div>
 
   <h5 class="text-center">{{ mensagem }}</h5>
-  <div class="card-deck">
+  <div class="card-deck d-flex flex-wrap justify-content-around">
     <div
-      class="cards m-3 d-flex flex-wrap justify-content-around"
+      class="cards my-3 d-flex flex-wrap justify-content-around"
       *ngFor="let item of listaCategoria"
     >
       <div class="card m-3" *ngFor="let produto of item.produtos">
