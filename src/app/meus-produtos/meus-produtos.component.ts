@@ -109,7 +109,7 @@ export class MeusProdutosComponent implements OnInit {
           this.produtoEdit = resp;
           this.categoriaEdit = new Categoria()
           this.produtoEdit = new Produto()
-          
+
           console.log(this.produtoEdit)
 
         });
@@ -131,7 +131,7 @@ export class MeusProdutosComponent implements OnInit {
     this.categoriaService
       .deleteCategoria(this.idProdutoDeletar)
       .subscribe(() => {
-        alert('Produto apagado com sucesso!');
+        alert('Produto deletado com sucesso!');
         this.findByEmailUser();
       });
   }
