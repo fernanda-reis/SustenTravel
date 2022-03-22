@@ -26,6 +26,7 @@ export class ProdutosComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    window.scroll(0, 0);
     this.nome = this.route.snapshot.params['nome'];
     this.buscarCategorias();
 
