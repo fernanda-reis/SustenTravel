@@ -1,6 +1,6 @@
-<div class = "bg-page">
+<div class="bg-page">
 
-  <div class = "divcarousel">
+  <div class="divcarousel">
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
@@ -38,190 +38,164 @@
 
   </div>
 
-  <div class = "container flex">
+  <div class="container flex">
 
-  <div class = "col-md-5 mt-5 textoexplicativo">
+    <div class="col-md-5 mt-5 textoexplicativo">
 
-    <p> Para você que ainda não conhece a iniciativa SustenTravel, saiba mais sobre nós assistindo ao nosso video de apresentação!</p>
-
-  </div>
-
-  <div class = "col-md-5 mt-5 d-none d-md-block">
-
-    <iframe width="460" height="350" src="https://www.youtube.com/watch?v=Fy3WixgEKQs" title="YouTube video player"
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen></iframe>
-
-  </div>
-
-  <div class="col-md-6 mt-5 d-md-none d-xm-block">
-    <iframe width="300" height="250" src="https://www.youtube.com/embed/6CwI5f9ttJI" title="YouTube video player"
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen></iframe>
-
-  </div>
-
-
-
-  </div>
-
-  <div class = "container">
-
-  <h3 class = "text-left ml-2 margem"> Encontre passeios por tipo </h3>
-
-  <div class = "carrousel-1 imagem">
-
-  <owl-carousel-o [options] = "customOptions">
-
-    <ng-template carouselSlide> <!-- Aldeias -->
-      <div class="slider">
-      <a [routerLink]="['/produtos', 'Aldeias']">
-
-        <img
-        class=""
-        src="https://imgur.com/3hRfCDY.jpg"
-        />
-
-      </a>
+      <p> Para você que ainda não conhece a iniciativa SustenTravel, saiba mais sobre nós assistindo ao nosso video de
+        apresentação!</p>
 
     </div>
-    </ng-template>
 
-    <ng-template carouselSlide> <!-- Radical -->
+    <div class="col-md-5 mt-5 d-none d-md-block">
 
-      <a [routerLink]="['/produtos', 'Radical']">
-        <img
-        class=""
-        src="https://imgur.com/nQbsElT.jpg"
-        />
+      <iframe width="460" height="350" src="https://www.youtube.com/embed/Fy3WixgEKQs" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
 
-      </a>
+    </div>
 
-    </ng-template>
+    <div class="container">
 
-    <ng-template carouselSlide> <!-- Litoral -->
+      <h3 class="text-left ml-2 margem"> Encontre passeios por tipo </h3>
 
-      <a [routerLink]="['/produtos', 'Litoral']">
-        <img
-        class=""
-        src="https://imgur.com/McfKMeb.jpg"
-        />
+      <div class="carrousel-1 imagem">
 
-      </a>
+        <owl-carousel-o [options]="customOptions">
 
-    </ng-template>
+          <ng-template carouselSlide>
+            <!-- Aldeias -->
+            <div class="slider">
+              <a [routerLink]="['/produtos', 'Aldeias']">
 
-    <ng-template carouselSlide> <!-- Rural -->
+                <img class="" src="https://imgur.com/3hRfCDY.jpg" />
 
-      <a [routerLink]="['/produtos', 'Rural']">
-        <img
-        class=""
-        src="https://imgur.com/UL3E5pv.jpg"
-        />
+              </a>
 
-      </a>
+            </div>
+          </ng-template>
 
-    </ng-template>
+          <ng-template carouselSlide>
+            <!-- Radical -->
 
-    <ng-template carouselSlide> <!-- Urbano -->
+            <a [routerLink]="['/produtos', 'Radical']">
+              <img class="" src="https://imgur.com/VY2Zm8U.jpg" />
 
-      <a [routerLink]="['/produtos', 'Urbano']">
-        <img
-        class=""
-        src="https://imgur.com/xVOkuD0.jpg"
-        />
+            </a>
 
-      </a>
+          </ng-template>
 
-    </ng-template>
+          <ng-template carouselSlide>
+            <!-- Litoral -->
 
-  </owl-carousel-o>
+            <a [routerLink]="['/produtos', 'Litoral']">
+              <img class="" src="https://imgur.com/McfKMeb.jpg" />
 
-</div> <!--Div Carrousel-1-->
+            </a>
 
-<h3 class = "text-left ml-2 margem"> Encontre passeios por região </h3>
+          </ng-template>
 
-<div class = "carrousel-2 imagem">
+          <ng-template carouselSlide>
+            <!-- Rural -->
 
-  <owl-carousel-o [options]="customOptions">
+            <a [routerLink]="['/produtos', 'Rural']">
+              <img class="" src="https://imgur.com/UL3E5pv.jpg" />
 
-      <ng-template carouselSlide> <!-- Sul -->
+            </a>
 
-        <a [routerLink]="['/produtos', 'Sul']">
-          <img
-          class=""
-          src="https://imgur.com/t0WV6Rp.jpg"
-          />
-    </a>
-      </ng-template>
-      <ng-template carouselSlide> <!-- Nordeste -->
-        <a [routerLink]="['/produtos', 'Nordeste']">
-          <img
-          class=""
-          src="https://imgur.com/HX0Frw4.jpg"
-          />
-    </a>
-      </ng-template>
+          </ng-template>
 
-      <ng-template carouselSlide> <!-- Norte -->
-        <a [routerLink]="['/produtos', 'Norte']">
-          <img
-          class=""
-          src="https://imgur.com/usXaFK5.jpg"
-          />
-    </a>
-      </ng-template>
+          <ng-template carouselSlide>
+            <!-- Urbano -->
 
-      <ng-template carouselSlide> <!-- Centro-Oeste -->
-        <a [routerLink]="['/produtos', 'Centro-Oeste']">
-          <img
-          class=""
-          src="https://imgur.com/yEfAn0h.jpg"
-          />
-    </a>
-      </ng-template>
+            <a [routerLink]="['/produtos', 'Urbano']">
+              <img class="" src="https://imgur.com/xVOkuD0.jpg" />
 
-      <ng-template carouselSlide> <!-- Sudeste -->
-        <a [routerLink]="['/produtos', 'Sudeste']">
-          <img
-          class=""
-          src="https://imgur.com/JQ7w7gc.jpg"
-          />
-    </a>
-      </ng-template>
+            </a>
 
-    </owl-carousel-o>
+          </ng-template>
 
+        </owl-carousel-o>
 
+      </div>
+      <!--Div Carrousel-1-->
 
-</div> <!--Div carrousel-2-->
+      <h3 class="text-left ml-2 margem"> Encontre passeios por região </h3>
 
-<div class = "container flex py-5">
+      <div class="carrousel-2 imagem">
 
-  <div class = "col-md-6 texto-inferior mt-5">
+        <owl-carousel-o [options]="customOptions">
 
-    <h2>Viaje com consciência</h2>
+          <ng-template carouselSlide>
+            <!-- Sul -->
 
-    <p>Explore novos lugares e culturas, expanda seus horizontes
-      e conheça um mundo inteiro de possibilidades.</p>
+            <a [routerLink]="['/produtos', 'Sul']">
+              <img class="" src="https://imgur.com/t0WV6Rp.jpg" />
+            </a>
+          </ng-template>
+          <ng-template carouselSlide>
+            <!-- Nordeste -->
+            <a [routerLink]="['/produtos', 'Nordeste']">
+              <img class="" src="https://imgur.com/HX0Frw4.jpg" />
+            </a>
+          </ng-template>
 
-    <p>Conheça as áreas menos favorecidas e contribua para o desenvolvimento
-      socio-economico destas regiões.
-    </p>
+          <ng-template carouselSlide>
+            <!-- Norte -->
+            <a [routerLink]="['/produtos', 'Norte']">
+              <img class="" src="https://imgur.com/usXaFK5.jpg" />
+            </a>
+          </ng-template>
 
-      <button type="button" class="btn btn-success mb-5" [routerLink]="['/produtos', 'sustentavel']">Quero Conhecer!</button>
+          <ng-template carouselSlide>
+            <!-- Centro-Oeste -->
+            <a [routerLink]="['/produtos', 'Centro-Oeste']">
+              <img class="" src="https://imgur.com/yEfAn0h.jpg" />
+            </a>
+          </ng-template>
 
-  </div> <!--Div da Esquerda-->
+          <ng-template carouselSlide>
+            <!-- Sudeste -->
+            <a [routerLink]="['/produtos', 'Sudeste']">
+              <img class="" src="https://imgur.com/JQ7w7gc.jpg" />
+            </a>
+          </ng-template>
 
-  <div class = "col-md-6 foto">
-
-    <img src="https://imgur.com/hJaweCa.jpeg" alt="Comerciante">
-
-</div> <!--Div da Direita-->
-
-</div> <!--Div da Div Inferior 1-->
-
-</div>  <!--DIV DA PAGE INTEIRA-->
+        </owl-carousel-o>
 
 
 
+      </div>
+      <!--Div carrousel-2-->
+
+      <div class="container flex py-5">
+
+        <div class="col-md-6 texto-inferior mt-5">
+
+          <h2>Viaje com consciência</h2>
+
+          <p>Explore novos lugares e culturas, expanda seus horizontes
+            e conheça um mundo inteiro de possibilidades.</p>
+
+          <p>Conheça as áreas menos favorecidas e contribua para o desenvolvimento
+            socio-economico destas regiões.
+          </p>
+
+          <button type="button" class="btn btn-success mb-5" [routerLink]="['/produtos', 'sustentavel']">Quero
+            Conhecer!</button>
+
+        </div>
+        <!--Div da Esquerda-->
+
+        <div class="col-md-6 foto">
+
+          <img src="https://imgur.com/hJaweCa.jpeg" alt="Comerciante">
+
+        </div>
+        <!--Div da Direita-->
+
+      </div>
+      <!--Div da Div Inferior 1-->
+
+    </div>
+    <!--DIV DA PAGE INTEIRA-->
