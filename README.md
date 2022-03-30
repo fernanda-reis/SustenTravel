@@ -1,7 +1,7 @@
 # Sustentravel
 
-Projeto gerado com Angular CLI versão 13.2.4.
-Front-end do projeto SustenTravel desenvolvido durante o bootcamp da Generation Brasil.
+Projeto gerado com Angular CLI versão 13.2.4.  
+Front-end do projeto SustenTravel desenvolvido durante o bootcamp da Generation Brasil.  
 Hospedado no [netlify](https://sustentravel.netlify.app/) e consumindo a API neste [repositório](https://github.com/gbdslx-dev/Projeto-Integrador).
 
 ## Development server
