@@ -1,8 +1,14 @@
-# Sustentravel
+<p align="center">
+          <img alt="Logo" src="https://user-images.githubusercontent.com/54251136/160927447-92e42716-ed38-4803-ab8a-a65abe0620c3.png"/>
+  </p>
+
+## Descrição
+
+Inspirado na meta de incentivar a geração de empregos e promover a cultura local através do turismo sustentável definido em vista da ODS 8, o SustenTravel atua como uma plataforma criada com  obetivo de fazer a ponte entre pequenas e médias empresas de turismo e viajantes que estejam procurando passeios e aventuras ao mesmo tempo em que contribuem para o desenvolvimento social e econômico do país.
+
+Hospedado no [netlify](https://sustentravel.netlify.app/) e consumindo a API [neste repositório](https://github.com/gbdslx-dev/Projeto-Integrador).  
 
 Projeto gerado com Angular CLI versão 13.2.4.  
-Front-end do projeto SustenTravel desenvolvido durante o bootcamp da Generation Brasil.  
-Hospedado no [netlify](https://sustentravel.netlify.app/) e consumindo a API neste [repositório](https://github.com/gbdslx-dev/Projeto-Integrador).
 
 ## Development server
 
